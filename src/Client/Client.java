@@ -2,7 +2,6 @@ package Client;
 
 import java.io.*;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.logging.Logger;
 
 public class Client {
@@ -13,13 +12,13 @@ public class Client {
 
     private static String HOST;
     private static int PORT;
-    private static String OUTPATH;
+    private static String PATH;
 
-    public Client(String host, int port, String outPath)
+    public Client(String host, int port, String path)
     {
         HOST = host;
         PORT = port;
-        OUTPATH=  outPath;
+        PATH=  path;
     }
 
     public void Run()
@@ -35,7 +34,7 @@ public class Client {
                     "Sending File to Server");
 
             send(
-                    OUTPATH);
+                    PATH);
 
             dataInputStream.close();
             dataOutputStream.close();
