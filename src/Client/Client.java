@@ -37,6 +37,9 @@ public class Client {
             send(
                     OUTPATH);
 
+            dataInputStream.close();
+            dataOutputStream.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

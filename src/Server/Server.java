@@ -18,7 +18,7 @@ public class Server {
         PORT = port;
         FILENAME = fileName;
     }
-    public static void Run()
+    public void Run()
     {
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             logger.info(String.format("Server starting on port %s", PORT));
